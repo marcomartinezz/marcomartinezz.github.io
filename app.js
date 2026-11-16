@@ -56,7 +56,7 @@ function createMenuCard(item) {
   article.className = "menu-card";
 
   const image = document.createElement("img");
-  image.src = item.imagen;
+  image.src = `items/${item.imagen}`;
   image.alt = item.nombre;
   image.loading = "lazy";
 
