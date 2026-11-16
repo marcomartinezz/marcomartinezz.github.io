@@ -1,0 +1,531 @@
+:root {
+  color-scheme: light;
+  --ink: #180610;
+  --muted: #634058;
+  --paper: #edcce4;
+  --line: #edc9ee;
+  --olive: #c76c99;
+  --serif: "Basic", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  min-height: 82px;
+  padding: 0 7.2%;
+  display: flex;
+  margin-top:16px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  text-decoration: none;
+}
+
+.brand span {
+  color: var(--olive);
+  font-style: italic;
+}
+
+.contact-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 0;
+  border: 0;
+  background: none;
+  color: var(--ink);
+  font: 500 0.88rem var(--sans);
+  cursor: pointer;
+}
+
+.contact-trigger:hover,
+.menu-link:hover {
+  color: var(--olive);
+}
+
+.whatsapp-mark {
+  width: 25px;
+  height: 25px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #d5dacb;
+  border-radius: 50%;
+  color: var(--olive);
+  font-size: 0.9rem;
+}
+
+main {
+  width: min(1120px, 85.6%);
+  margin: 0 auto;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 9%;
+  align-items: center;
+  padding: 74px 0 77px;
+}
+
+.eyebrow {
+  margin: 0 0 15px;
+  color: var(--olive);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1,
+.section-heading h2,
+.contact-dialog h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+}
+
+h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.5rem, 5vw, 4.3rem);
+  line-height: 1.1;
+}
+
+.intro-description {
+  max-width: 440px;
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.menu-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.location {
+  overflow: hidden;
+  padding: 15px;
+  background: #f1efe8;
+}
+
+.location-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 4px 13px;
+}
+
+.location-heading .eyebrow {
+  margin-bottom: 4px;
+  font-size: 0.59rem;
+}
+
+.location-address {
+  margin: 0;
+  font-size: 0.83rem;
+  font-weight: 600;
+}
+
+.location-pin {
+  color: var(--olive);
+  font-size: 1.5rem;
+}
+
+.location iframe {
+  display: block;
+  width: 100%;
+  height: 206px;
+  border: 0;
+  filter: saturate(0.65);
+}
+
+.menu-section {
+  padding: 4px 0 82px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.section-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+.section-heading h2 {
+  margin-bottom: 0;
+  font-size: 2.25rem;
+}
+
+.menu-note {
+  margin-bottom: 5px;
+  color: var(--muted);
+  font-size: 0.79rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 23px;
+}
+
+.menu-card {
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  background: #fffefa;
+}
+
+.menu-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #efede6;
+}
+
+.menu-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 11px 13px 13px;
+}
+
+.menu-card-title {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 2.7em;
+  margin-bottom: 8px;
+}
+
+.menu-card h3 {
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.menu-price {
+  flex: 0 0 auto;
+  color: var(--olive);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.menu-description {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  min-height: calc(1.48em * 3);
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.48;
+}
+
+.menu-ingredients {
+  margin: 0;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  min-height: calc(1.55em * 3 + 12px);
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+.menu-ingredients strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.menu-status {
+  grid-column: 1 / -1;
+  padding: 24px 0;
+  color: var(--muted);
+}
+
+.faq-section {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  padding-bottom: 82px;
+}
+
+.faq-section .section-heading {
+  margin-bottom: 17px;
+}
+
+.faq-list {
+  border-top: 1px solid var(--line);
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 17px 4px;
+  color: var(--ink);
+  font-size: 0.94rem;
+  font-weight: 600;
+  line-height: 1.5;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  flex: 0 0 auto;
+  color: var(--olive);
+  content: "+";
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
+.faq-item p {
+  margin: -2px 36px 17px 4px;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.site-footer {
+  min-height: 92px;
+  padding: 20px 7.2%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+}
+
+.footer-brand {
+  font-size: 1.3rem;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.contact-dialog {
+  width: min(430px, calc(100% - 32px));
+  padding: 39px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.contact-dialog::backdrop {
+  background: rgb(35 35 28 / 48%);
+  backdrop-filter: blur(2px);
+}
+
+.dialog-close {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.contact-dialog h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.contact-dialog > p:not(.eyebrow) {
+  margin-bottom: 22px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px;
+  background: var(--olive);
+  color: white;
+  font-size: 0.87rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact-dialog small {
+  display: block;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.68rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .intro {
+    gap: 5%;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    min-height: 70px;
+    padding: 0 6%;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .contact-trigger {
+    gap: 7px;
+    font-size: 0.76rem;
+  }
+
+  main {
+    width: 88%;
+  }
+
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 52px 0 54px;
+  }
+
+  h1 {
+    font-size: 3.1rem;
+  }
+
+  .location iframe {
+    height: 190px;
+  }
+
+  .menu-section {
+    padding-bottom: 58px;
+  }
+
+  .faq-section {
+    padding-bottom: 58px;
+  }
+
+  .section-heading {
+    align-items: start;
+    gap: 8px;
+  }
+
+  .section-heading h2 {
+    font-size: 1.9rem;
+  }
+
+  .menu-note {
+    max-width: 112px;
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .menu-grid {
+    gap: 12px;
+  }
+
+  .menu-card-content {
+    padding: 12px 10px;
+  }
+
+  .menu-card h3 {
+    font-size: 0.98rem;
+  }
+
+  .menu-price {
+    font-size: 0.75rem;
+  }
+
+  .menu-description {
+    font-size: 0.72rem;
+  }
+
+  .site-footer {
+    padding: 19px 6%;
+  }
+
+  .site-footer p {
+    max-width: 145px;
+    text-align: right;
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Comida de estación, ingredientes honestos y algo dulce para compartir. Conocé el menú de Miga & Miel."
+    />
+    <title>Mushis Foods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="/logo.png" type="image/png " />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&family=Basic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div style="display:flex;">
+        <img class="logo" src="logo.png" alt="Logo de Mushis Foods" style="width:64px"/>
+        <a class="brand" href="#" aria-label="Mushis Foods, inicio" style="align-self: center;margin-left:16px">Mushis Foods</a>
+      </div>
+      <button class="contact-trigger" id="contact-trigger" type="button" aria-haspopup="dialog">
+        <span class="whatsapp-mark" aria-hidden="true">↗</span>
+        Pedí algo especial
+      </button>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="intro-title">
+        <div class="intro-copy">
+          <h1 id="intro-title">Hecho con tiempo.<br />Disfrutado sin apuro.</h1>
+          <p class="intro-description">
+            Platos simples, ingredientes de estación y sabores que se sienten como en casa.
+            Cocinamos cada día para que encuentres algo rico, fresco y hecho con cariño.
+          </p>
+          <a class="menu-link" href="#menu">Descubrí el menú <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="location">
+          <div class="location-heading">
+            <div>
+              <p class="eyebrow">VENÍ A VISITARNOS</p>
+              <p class="location-address">Lanús, Buenos Aires</p>
+            </div>
+            <span class="location-pin" aria-hidden="true">⌖</span>
+          </div>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d289.97844513710226!2d-58.389563488754746!3d-34.68672292311382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccd32fa1b2e27%3A0x61f66da77dfb4634!2sPasteles%20Mushi%E2%80%99s!5e0!3m2!1ses-419!2sar!4v1794850968861!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+      </section>
+
+      <section class="menu-section" id="menu" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">PARA CADA MOMENTO</p>
+            <h2 id="menu-title">Nuestro menú</h2>
+          </div>
+          <p class="menu-note">Preparado fresco todos los días</p>
+        </div>
+        <div class="menu-grid" id="menu-grid" aria-live="polite">
+          <p class="menu-status">Cargando el menú…</p>
+        </div>
+      </section>
+
+      <section class="faq-section" aria-labelledby="faq-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">TE AYUDAMOS</p>
+            <h2 id="faq-title">Preguntas frecuentes</h2>
+          </div>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>¿Qué medios de pago aceptan en Mushis?</summary>
+            <p>Aceptamos: transferencia, efectivo y tarjeta</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Dónde están ubicados?</summary>
+            <p>Estamos ubicados en Jean Jaurés 797</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Hacen envíos?</summary>
+            <p>Cerca de la zona donde estamos ubicados</p>
+          </details>
+          <details class="faq-item">
+            <summary>¿Qué horarios tienen?</summary>
+            <p>7:30am a 6:00pm</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#">Mushis Food</a>
+      <p>Un buen momento empieza en la mesa.</p>
+    </footer>
+
+    <dialog class="contact-dialog" id="contact-dialog" aria-labelledby="contact-title">
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Cerrar">×</button>
+      <p class="eyebrow">UN DETALLE A TU MEDIDA</p>
+      <h2 id="contact-title">¿Un postre especial?</h2>
+      <p>Contanos qué tenés en mente y coordinamos tu pedido por WhatsApp.</p>
+      <a
+        class="whatsapp-button"
+        href="https://wa.me/541135609775?text=Hola%2C%20quisiera%20consultar%20por%20un%20pedido%20especial%20de%20postres.%20Enviado%20desde%20la%20pagina%20web%20de%20Mushis%20Foods."
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span aria-hidden="true">↗</span> Escribir por WhatsApp
+      </a>
+      <small>Al no tener un número de contacto configurado, WhatsApp te permitirá elegir a quién escribir.</small>
+    </dialog>
+  </body>
+</html>
